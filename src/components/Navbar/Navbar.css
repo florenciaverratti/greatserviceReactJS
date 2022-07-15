@@ -17,17 +17,24 @@
 .secciones{
     flex-grow: 0.2;
 }
-li, a{
+li, a, p{
     display: inline;
     justify-content: right;
     font-family: 'Raleway';
-    font-size: smaller;
+    font-size: large;
     color: white;
     padding: 5px;
     text-decoration: none;
     list-style: none;
 }
-a:hover{
+.FiShoppingCart:hover, a:hover, p:hover{
     cursor: pointer;
     color:  #ffbd60;
+}
+
+div{
+    display: inline;
+}
+p{
+    font-size: larger;
 }

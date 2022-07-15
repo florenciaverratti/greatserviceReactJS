@@ -1,5 +1,6 @@
-import './Navbar.css'
-import logo from './LogoC.png'
+import './Navbar.css';
+import logo from './LogoC.png';
+import CartWidget from '../CartWidget/CartWidget';
 
 const Navbar = () => {
     return (
@@ -9,13 +10,14 @@ const Navbar = () => {
             </div>
             <div className="secciones">
                 <ul>
-                    <li> <a> link 1</a> </li>
-                    <li> <a> link 2</a> </li>
-                    <li> <a> link 3</a> </li>
+                    <li> <a> Tinturas</a> </li>
+                    <li> <a> Tratamientos</a> </li>
+                    <li> <a> Materiales</a> </li>
+                    <li><CartWidget/></li>
                 </ul>
             </div>
         </nav>
     )
 }
 
-export default Navbar;
+export default Navbar
