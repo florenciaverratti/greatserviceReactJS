@@ -17,7 +17,7 @@
 .secciones{
     flex-grow: 0.2;
 }
-li, a, p{
+li, a{
     display: inline;
     justify-content: right;
     font-family: 'Raleway';
@@ -27,14 +27,11 @@ li, a, p{
     text-decoration: none;
     list-style: none;
 }
-.FiShoppingCart:hover, a:hover, p:hover{
+.FiShoppingCart:hover, a:hover{
     cursor: pointer;
     color:  #ffbd60;
 }
 
-div{
+.divInline{
     display: inline;
-}
-p{
-    font-size: larger;
 }

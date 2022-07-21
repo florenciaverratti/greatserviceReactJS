@@ -1,9 +1,11 @@
 import{FiShoppingCart} from 'react-icons/fi'
+import ItemCount from '../ItemCount/ItemCount'
+
 const CartWidget = () => {
     return (
-        <div>
+        <div className='divInline'>
             <FiShoppingCart className='FiShoppingCart'/>
-            <p> 10 </p> 
+            <a> 10 </a> 
         </div>
     )
 }

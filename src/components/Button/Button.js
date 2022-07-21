@@ -1,5 +1,5 @@
-const Button = (props)=> {
-    return <button style={{color: props.color}} onClick={props.handleClick}> {props.children} </button>
+const Button = ({handleClick, style, children})=> {
+    return <button onClick={handleClick} style={style}> {children} </button>
 }
 
 export default Button
