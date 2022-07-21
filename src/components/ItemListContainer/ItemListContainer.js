@@ -1,7 +1,7 @@
 import { getProduct } from "../../asyncMock"
 import {useEffect, useState} from 'react'
-
-const ItemListContainer = ({style, greeting,show, setShow}) => {
+import './ItemListContainer.css'
+const ItemListContainer = ({ greeting,show, setShow}) => {
 
     const [product,setProducts] = useState([])
     const [loading, setLoading] = useState(true)
@@ -19,8 +19,8 @@ const ItemListContainer = ({style, greeting,show, setShow}) => {
 
     return (
         <>
-        <h1 style={style}>{greeting}</h1>
-        <ul>{productosTransformados} </ul>
+        <h1 className="item">{greeting}</h1>
+        {/* <ul>{productosTransformados} </ul> */}
         </>
     )
 }

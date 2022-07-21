@@ -1,5 +1,5 @@
 import{FiShoppingCart} from 'react-icons/fi'
-import ItemCount from '../ItemCount/ItemCount'
+import './CartWidget.css'
 
 const CartWidget = () => {
     return (

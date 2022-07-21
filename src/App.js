@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar/>
-        <ItemListContainer style={{color: '#c77400'}} show={show} setShow={setShow} greeting="Hola coders"/>
+        <ItemListContainer show={show} setShow={setShow} greeting="Hola coders"/>
         <Tarjeta/>
       </header>
     </div>

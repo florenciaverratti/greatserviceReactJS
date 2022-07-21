@@ -1,4 +1,4 @@
-.container-card{
+/*.container-card{
 	width: 100%;
 	display: flex;
 	max-width: 1100px;
@@ -38,30 +38,7 @@
 	font-size: 14px;
 	margin-bottom: 5px;
 }
-.card .contenido-card button{
-	padding: 10px;
-	margin: 10px;
-	text-decoration: none;
-	color: #faa227;
-    background-color: transparent;
-    font-family: 'Raleway';
-    font-size: medium;
-	border: 1px solid  #faa227;
-	border-radius: 4px;
-	transition: all 400ms ease;
-}
-.card .contenido-card button:hover{
-	background: #e98801;
-	color: #fff;
-}
-h4{
-    display: inline;
-}
-.botonIncrement[disabled] {
-    border: 1px solid #999999;
-    background-color: #cccccc;
-    color: #666666;
-}
+
 @media only screen and (min-width:320px) and (max-width:768px){
 	.container-card{
 		flex-wrap: wrap;
@@ -69,4 +46,4 @@ h4{
 	.card{
 		margin: 15px;
 	}
-}
+}*/
