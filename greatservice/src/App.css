@@ -1,0 +1,16 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway';
+  background-image: url(https://static.vecteezy.com/system/resources/previews/006/409/917/non_2x/scissors-seamless-pattern-retro-salon-background-vector.jpg);
+  min-height: 100vh;
+  background-size: contain;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
