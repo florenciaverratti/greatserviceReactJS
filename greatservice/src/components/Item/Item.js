@@ -1,5 +1,5 @@
 import './Item.css'
-import ItemCount from '../ItemCount 2/ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
 import ButtonDetalle from '../ButtonDetalle/ButtonDetalle'
 import { useState } from 'react'
 
@@ -16,8 +16,10 @@ const Item = ({ product }) => {
                 <img src={product.img} />
                 <div className="contenido-card">
                     <h3>{product.name}</h3>
-                    <p>{product.price} </p>
-                    <ItemCount/>
+                    <h6 className='precio'>${product.price} </h6>
+                    <ItemCount show={show} stock={product.stock} initial={1} onAdd={handleOnAdd} />   
+                    <ButtonDetalle/>
+                    <p>Stock disponible {product.stock} </p>
                 </div>
             </div>
         </div>
@@ -25,12 +27,10 @@ const Item = ({ product }) => {
 }
 /*
         
-                    <ItemCount show={show} stock={10} initial={1} onAdd={handleOnAdd} />    
+                    
                     <p>{product.stock} </p>
                     <p> {product.description} </p>
         category: 'Tratamientos',
         
  */
 export default Item
-
-

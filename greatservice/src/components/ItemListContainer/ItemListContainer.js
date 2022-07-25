@@ -5,7 +5,7 @@ import  ItemList from '../ItemList/ItemList'
 
 const ItemListContainer = ({ greeting,show, setShow}) => {
 
-   /* const [products,setProducts] = useState([])
+    const [products,setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     
     useEffect(() => {
@@ -19,13 +19,13 @@ const ItemListContainer = ({ greeting,show, setShow}) => {
     }, [])
 
     if(loading) {
-        return <h1>Cargando productos...</h1>
+        return <h1 className='item'>Cargando productos...</h1>
     }
-<ItemList products={products}/>
-*/
+
     return (
         <>
         <h1 className="item">{greeting}</h1>
+        <ItemList products={products}/>
         </>
     )
 }

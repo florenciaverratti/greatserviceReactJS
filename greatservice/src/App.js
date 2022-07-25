@@ -15,7 +15,6 @@ function App() {
       <header className="App-header">
         <Navbar/>
         <ItemListContainer show={show} setShow={setShow} greeting="Hola coders"/>
-        <ItemCount show={show} stock={10} initial={1} onAdd={handleOnAdd}/>
       </header>
     </div>
   );
