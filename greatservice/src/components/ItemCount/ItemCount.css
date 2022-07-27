@@ -1,6 +1,5 @@
 
-.card .contenido-card button{
-	padding: 10px;
+button{
 	margin: 10px;
 	text-decoration: none;
 	color: #faa227;
@@ -11,15 +10,18 @@
 	border-radius: 4px;
 	transition: all 400ms ease;
 }
-.card .contenido-card button:hover{
+button:hover{
 	background: #e98801;
 	color: #fff;
 }
-.card .contenido-card button:disabled {
+button:disabled {
     border: 1px solid #999999;
     background-color: #cccccc;
     color: #666666;
 }
 .contador {
     display: inline;
+}
+.carrito{
+	color: #faa227;
 }

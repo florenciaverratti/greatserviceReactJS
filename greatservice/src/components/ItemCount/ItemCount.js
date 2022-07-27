@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react' 
 import './ItemCount.css'
+import{FiShoppingCart} from 'react-icons/fi'
 
 const Counter = ({show, stock, initial, onAdd})=> {
     const [count, setCount] = useState(initial)
@@ -21,12 +22,12 @@ const Counter = ({show, stock, initial, onAdd})=> {
         }
     }
     return(
-        <div>
+        <>
             <button onClick={decrement} disabled={count === initial ? true : null}>-</button>
-            <h4 className='contador'> {count} </h4>
+            <h5 className='contador'> {count} </h5>
             <button  onClick={increment}  disabled={count === stock ? true : null}>+</button>
-            <button style={{width: '80%' }} onClick={() => onAdd(count)} >Agregar al carrito</button>
-        </div>  
+            <FiShoppingCart className='FiShoppingCart carrito' onClick={() => onAdd(count)} />
+        </>  
     ) 
 }
 

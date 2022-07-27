@@ -41,6 +41,23 @@
 	margin: 3px;
 	justify-content: end;
 }
+
+.card .contenido-card button{
+	padding: 10px;
+	margin: 10px;
+	text-decoration: none;
+	color: #faa227;
+    background-color: transparent;
+    font-family: 'Raleway';
+    font-size: medium;
+	border: 1px solid  #faa227;
+	border-radius: 4px;
+	transition: all 400ms ease;
+}
+.card .contenido-card button:hover{
+	background: #e98801;
+	color: #fff;
+}
 @media only screen and (min-width:320px) and (max-width:768px){
 	.container-card{
 		flex-wrap: wrap;

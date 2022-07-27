@@ -1,6 +1,10 @@
 const ButtonDetalle= ({ product }) => {
+    const handleClick = (description) => {
+        console.log(description)
+    }
+
     return(
-        <button> Ver más</button>
+        <button onClick={handleClick}> Ver más</button>
     )
 }
 export default ButtonDetalle
