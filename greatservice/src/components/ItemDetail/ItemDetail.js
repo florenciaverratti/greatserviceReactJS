@@ -1,28 +1,27 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
-import { useState } from 'react'
 
-const ItemDetail = ({ products }) => {
-    const [show, setShow] = useState(true)
+const ItemDetail = ({ id, name, category, img, price, stock, description}) => {
+        console.log(name);
     const handleOnAdd = (quantity) => {
-        console.log('cantidad de items agregados', quantity)
+        console.log('agregue al carrito: ', quantity)
     }
     return (
         <div className='ItemDetail'>
             <div className='divDetail'>
                 <div className='colImg'>
-                <img className='img' src={products.img} />
+                <img className='img' src={img} />
                 </div>
                 <div className='colInfo'>
-                    <h4 className='categoria'>{products.category}</h4>
-                <h3 className='tipografia'>{products.name}</h3>
-                <p className='stock'>Stock disponible {products.stock} </p>
-                <h6 className='precio tipografia'>${products.price} </h6>
-                <ItemCount show={show} stock={products.stock} initial={1} onAdd={handleOnAdd}/>
+                    <h4 className='categoria'>{category}</h4>
+                <h3 className='tipografia'>{name}</h3>
+                <p className='stock'>Stock disponible {stock} </p>
+                <h6 className='precio tipografia'>${price} </h6>
+                <ItemCount stock={stock}  onAdd={handleOnAdd}/>
                 </div>
             </div>
             <div>
-                <p className='description'>{products.description} </p>
+                <p className='description'>{description} </p>
             </div>
         </div>
         )

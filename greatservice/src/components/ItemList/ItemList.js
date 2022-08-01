@@ -1,11 +1,10 @@
 import Item from "../Item/Item"
 import './ItemList.css'
-const ItemList = ({ products }) => {
+
+const ItemList = ({products}) => {
     return (
         <div className="divFlex">
-            {products.map(product => (
-                <Item product={product} key={product.id}/>
-            ))}
+            {products.map(prod => <Item key={prod.id} {...prod} />)}
         </div>
     )
 }

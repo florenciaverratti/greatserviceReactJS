@@ -1,35 +1,23 @@
 import './Item.css'
-import ButtonDetalle from '../ButtonDetalle/ButtonDetalle'
+import {Link} from 'react-router-dom'
 
-const Item = ({ product }) => {
-    
-    const handleOnAdd = (quantity) => {
-        console.log('cantidad de items agregados', quantity)
-    }
+const Item = ({ id, name, img, price, stock}) => {
     
     return (
         <div className="container-card divInline">
             <div className="card" >
-                <img src={product.img} />
+                <img src={img} alt={name} />
                 <div className="contenido-card">
-                    <h3>{product.name}</h3>
-                    <h6 className='precio'>${product.price} </h6>
-                    <ButtonDetalle/>
-                    <p>Stock disponible {product.stock} </p>
+                    <h3>{name}</h3>
+                    <h6 className='precio'>${price} </h6>
+                    <button>
+                    <Link to={`/detail/${id}`} className='Option'>Ver detalle</Link>
+                    </button>
+                    <p>Stock disponible {stock} </p>
                 </div>
             </div>
         </div>
     )
+    console.log(id);
 }
-/*
-
-import { useState } from 'react'
-const [show, setShow] = useState(true)
-<ItemCount show={show} stock={product.stock} initial={1} onAdd={handleOnAdd} />   
-
-<p>{product.stock} </p>
-<p> {product.description} </p>
-        category: 'Tratamientos',
-        
- */
 export default Item
