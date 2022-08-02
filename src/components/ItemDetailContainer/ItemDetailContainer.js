@@ -14,7 +14,13 @@ const ItemDetailContainer = ()=> {
                 setProduct(response)
             })
         }, [productId])
-    
+
+        useEffect(()=>{
+            const onResize = () => console.log('buenas')
+            window.addEventListener('resize', onResize)
+            return ()=> window.removeEventListener('resize', onResize)
+        },[])
+
         return (
             <>
             <ItemDetail {...product}/>

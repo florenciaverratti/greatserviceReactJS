@@ -4,19 +4,28 @@ const MercadoLibre = () => {
     const [products, setProducts]= useState([])
     const [input, setInput]= useState('')
 
-    const handleSearch =()=>{
+    const handleSearch =(e)=>{
         fetch('https://api.mercadolibre.com/sites/MLA/search?q=' + input)
         .then(response => {
             return response.json()
         }).then(res => setProducts(res.results))
     }
+
+    const handleKeyDown =(e) =>{
+        setInput(e.target.value)
+    }
+    
     return(
     <>
     <h1>MercadoLibre</h1>
+        <form onSubmit={handleSearch}>
+            <input value={input} 
+            //onChange={(e) => setInput(e.target.value)}
+            onkeydown={handleKeyDown}
+            />
+        </form>
 
-    <input value={input} onChange={(e) => setInput(e.target.value)}/>
-
-    <button onClick={handleSearch}> Buscar</button>
+    <button type="submit"> Buscar</button>
     
     {products.map(prod => {
         return(

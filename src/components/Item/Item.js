@@ -18,6 +18,5 @@ const Item = ({ id, name, img, price, stock}) => {
             </div>
         </div>
     )
-    console.log(id);
 }
 export default Item

@@ -1,6 +1,6 @@
 const products =[
     {
-        id: 1,
+        id: '1',
         name: 'Tintura',
         price: 4000,
         category: 'servicios',
@@ -9,7 +9,7 @@ const products =[
         description: 'La tintura tarda 80min y se usa la marca igora'
     },
     {
-        id: 2,
+        id: '2',
         name: 'Igora',
         price: 900,
         category: 'productos',
@@ -18,7 +18,7 @@ const products =[
         description: 'El color ha sido el centro de nuestro trabajo durante más de 100 años. Estableciendo nuevos estándares en el mercado, IGORA ha potenciado la creatividad de nuestros coloristas durante más de 50 años. Ir un paso por delante de las tendencias siempre ha sido nuestro compromiso para ti. Entendemos que necesitas una coloración en la que puedas confiar y que nunca te decepcione. Nuestras gamas de color profesional se caracterizan por proporcionar unos resultados fascinantes con un 100 % de fiabilidad, incluso bajo las condiciones más complicadas.'
     },
     {
-        id: 3 ,
+        id: '3' ,
         name: 'Shock de btx',
         price: 1000,
         category: 'tratamientos',

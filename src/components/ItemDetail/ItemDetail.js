@@ -1,14 +1,17 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
+import {Link} from 'react-router-dom'
+import{IoArrowBackOutline} from 'react-icons/io5'
 
 const ItemDetail = ({ id, name, category, img, price, stock, description}) => {
-        console.log(name);
+        
     const handleOnAdd = (quantity) => {
         console.log('agregue al carrito: ', quantity)
     }
     return (
         <div className='ItemDetail'>
             <div className='divDetail'>
+                <Link to= '/'> <IoArrowBackOutline className='IoArrowBackOutline' style={{color: '#faa227'}} /> </Link>
                 <div className='colImg'>
                 <img className='img' src={img} />
                 </div>

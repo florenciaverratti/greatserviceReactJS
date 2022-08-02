@@ -1,1 +1,0 @@
-Este proyecto esta pensado para que una peluqueria puedo tener su pagina web para otogar un excelente servicio de productos, tratamientos, herramientas de peluqueria y demas
