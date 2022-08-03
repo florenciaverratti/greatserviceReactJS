@@ -23,14 +23,22 @@ const ItemListContainer = ({ greeting}) => {
         })
     }, [categoryId])
 
+    useEffect(() => {
+        const onResize = () => console.log('cambio el tamaño de ventana')
+
+        window.addEventListener('resize', onResize)
+
+        return () => window.removeEventListener('resize', onResize)
+    }, [])
+
     if(loading) {
         return <h1 className='item'>Cargando productos...</h1>
     }
 
     return (
         <>
-        <h1 className="item">{greeting}</h1>
-        <ItemList products={products} />
+            <h1 className="item">{greeting}</h1>
+            <ItemList products={products} />
         </>
     )
 }
