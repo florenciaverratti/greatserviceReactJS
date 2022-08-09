@@ -12,6 +12,7 @@ const ItemListContainer = ({ greeting}) => {
     const { categoryId } = useParams()
 
     useEffect(() => {
+        setLoading(true)
         const asyncFunction = categoryId ? getProductsByCategory : getProduct
         
         asyncFunction(categoryId).then(response => {
@@ -23,21 +24,17 @@ const ItemListContainer = ({ greeting}) => {
         })
     }, [categoryId])
 
-    useEffect(() => {
-        const onResize = () => console.log('cambio el tamaño de ventana')
-
-        window.addEventListener('resize', onResize)
-
-        return () => window.removeEventListener('resize', onResize)
-    }, [])
-
     if(loading) {
         return <h1 className='item'>Cargando productos...</h1>
     }
-
+    if(products.length === 0) {
+        return categoryId ? <h1>No hay productos en nuestra categoria {categoryId}</h1> : <h1>No hay productos disponibles</h1>
+    }
+    
     return (
         <>
-            <h1 className="item">{greeting}</h1>
+        
+            <h1 className="item up">{` ${categoryId || ''}`}</h1>
             <ItemList products={products} />
         </>
     )

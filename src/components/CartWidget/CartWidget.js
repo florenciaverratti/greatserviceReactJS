@@ -1,12 +1,19 @@
 import{FiShoppingCart} from 'react-icons/fi'
 import './CartWidget.css'
+import { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
+
 
 const CartWidget = () => {
-    return (
-        <div className='divInline'>
+    const { getQuantity } = useContext(CartContext)
+    const quantity = getQuantity()
+
+    return(
+        <Link to='/cart' className="CartWidget">
             <FiShoppingCart className='FiShoppingCart'/>
-            <a> 10 </a> 
-        </div>
+            <a className='a'> {quantity}</a> 
+        </Link>
     )
 }
 

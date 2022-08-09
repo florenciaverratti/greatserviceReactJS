@@ -16,8 +16,10 @@
 }
 .secciones{
     flex-grow: 0.2;
+    align-self: center;
 }
-.seccion{
+
+.Option {
     display: inline;
     justify-content: right;
     font-family: 'Raleway';
@@ -26,8 +28,15 @@
     padding: 5px;
     text-decoration: none;
     list-style: none;
-}
-.FiShoppingCart:hover, a:hover{
-    cursor: pointer;
-    color:  #ffbd60;
+  }
+  
+  .ActiveOption {
+    display: inline;
+    justify-content: right;
+    font-family: 'Raleway';
+    font-size: x-large;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    list-style: none;
 }

@@ -1,7 +1,7 @@
 import './Navbar.css';
 import logo from './LogoC.png';
 import CartWidget from '../CartWidget/CartWidget';
-import { Link } from 'react-router-dom'
+import { Link, NavLink  } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -13,9 +13,9 @@ const Navbar = () => {
             </div>
             <div className="secciones">
                 <ul>
-                <Link to='/category/tratamientos' className='seccion'>Tratamientos</Link>
-                <Link to='/category/productos'className='seccion'>Productos</Link>
-                <Link to='/category/servicios'className='seccion'>Servicios</Link>
+                <NavLink to='/category/tratamientos' class className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Tratamientos</NavLink>
+                <NavLink to='/category/productos' className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Productos</NavLink>
+                <NavLink to='/category/servicios'className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Servicios</NavLink>
                     <li className='seccion'><CartWidget/></li>
                 </ul>
             </div>
