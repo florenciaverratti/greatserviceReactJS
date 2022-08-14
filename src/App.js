@@ -6,11 +6,13 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { CartContextProvider } from './context/CartContext'
 import { UserContextProvider} from './context/UserContext'
+import { NotificationProvider} from './notification/Notification'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <NotificationProvider>
       <UserContextProvider>
         <CartContextProvider>
           <BrowserRouter>
@@ -24,6 +26,7 @@ function App() {
           </BrowserRouter> 
         </CartContextProvider>
       </UserContextProvider>
+      </NotificationProvider>
       </header>
     </div>
   );
