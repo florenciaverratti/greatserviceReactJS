@@ -8,6 +8,16 @@ import { CartContext } from '../../context/CartContext'
 const CartWidget = () => {
     const { getQuantity } = useContext(CartContext)
     const quantity = getQuantity()
+    const totalQuantity = getQuantity()
+    
+    if(totalQuantity === 0) {
+        return (
+            <>
+            <FiShoppingCart className='FiShoppingCart cartOculto'/>
+            <a className='cartOculto'> {quantity}</a> 
+            </>
+        )
+    }
 
     return(
         <Link to='/cart' className="CartWidget">

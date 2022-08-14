@@ -1,0 +1,25 @@
+.divDetail{
+    display: flex;
+    padding-bottom: 5px;
+}
+.colInfo{
+    display: inline;
+    flex-grow: 1;
+}   
+.tipografia{
+    color: #faa227;
+    margin: 0px ;
+}
+.cant{
+    font-size: 20px;
+}
+.precio{
+    line-height: 1.8;
+    color: #6a6a6a;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.ButtonOpcion{
+    align-self: flex-end;
+    flex-grow: 0.2;
+}

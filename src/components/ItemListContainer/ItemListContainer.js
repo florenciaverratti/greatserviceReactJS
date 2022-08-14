@@ -8,7 +8,6 @@ const ItemListContainer = ({ greeting}) => {
 
     const [products,setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-    const [title, setTitle] = useState('Primer titulo')
     const { categoryId } = useParams()
 
     useEffect(() => {
@@ -24,12 +23,6 @@ const ItemListContainer = ({ greeting}) => {
         })
     }, [categoryId])
 
-    useEffect(() => {
-        setTimeout(() => {
-            setTitle('Segundo titulo')
-        }, 2000)
-    }, [])
-
     if(loading) {
         return <h1 className='item'>Cargando productos...</h1>
     }
@@ -39,9 +32,8 @@ const ItemListContainer = ({ greeting}) => {
     
     return (
         <>
-        
+            <h1 className='item'>{greeting}</h1>
             <h1 className="item up">{` ${categoryId || ''}`}</h1>
-            <h2>{title}</h2>
             <ItemList products={products} />
         </>
     )
