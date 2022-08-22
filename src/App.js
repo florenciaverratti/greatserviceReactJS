@@ -32,7 +32,7 @@ function App() {
       </NotificationProvider>
       </header>
     </div>
-  );
+  )
 }
 
 export default App;

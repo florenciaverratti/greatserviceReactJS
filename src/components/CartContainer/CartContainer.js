@@ -4,8 +4,12 @@ import { CartContext } from '../../context/CartContext'
 import CartItem from '../CartItem/CartItem'
 import { Link } from 'react-router-dom'
 
-const Cart= () => {
-    const { cart, clearCart, total } = useContext(CartContext)  
+
+const CartContainer= () => {
+    const { cart, clearCart, getTotal, total} = useContext(CartContext)  
+
+    
+
     return(
         <>
         <div>
@@ -18,10 +22,11 @@ const Cart= () => {
             <Link to='/checkout' className='ButtonOpcion'>
             <button>Continuar compra</button>
             </Link>
+
             </div>
 
         </>
     )
 }
 
-export default Cart
+export default CartContainer

@@ -6,6 +6,7 @@ import { CartContext } from '../../context/CartContext'
 
 
 const CartWidget = () => {
+
     const { getQuantity, totalQuantity } = useContext(CartContext)
     
     if(totalQuantity === 0) {
