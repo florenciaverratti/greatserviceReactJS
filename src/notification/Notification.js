@@ -1,5 +1,4 @@
-import { useState, createContext } from "react";
-
+import { createContext, useState } from "react";
 
 const Notification = ({ message, severity, classes}) => {
 
@@ -11,7 +10,7 @@ const Notification = ({ message, severity, classes}) => {
       height: 'auto',
       padding: '10px 20px 10px 20px',
       color: 'white',
-      backgroundColor: severity === 'success' ? 'green' : 'red'
+      backgroundColor:  '#faa227'
     }
 
     if(message === '') return
